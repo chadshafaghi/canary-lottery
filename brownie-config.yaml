@@ -1,0 +1,52 @@
+dotenv: .env
+dependencies:
+  - smartcontractkit/chainlink-brownie-contracts@0.2.1
+  - OpenZeppelin/openzeppelin-contracts@4.4.1
+compiler:
+  solc:
+    remappings:
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.2.1"
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.1"
+networks:
+  default: development
+  mainnet-fork:
+    eth_usd_price_feed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+    vrf_coordinator: "0xf0d54349aDdcf704F77AE15b96510dEA15cb7952"
+    vrf_link_token: "0x514910771AF9Ca656af840dff83E8264EcF986CA"
+    vrf_key_hash: "0xAA77729D3466CA35AE8D28B3BBAC7CC36A5031EFDC430821C02BC31A238AF445"
+    vrf_fee: 250000000000000000
+    wallet_adr: "0x34d5F2f506437752819fAaefa779b2dC66efB217"
+    wallet_private_key: ${PRIVATE_KEY_MAINNET_ALCHEMY}
+    verify: "True"
+  rinkeby:
+    eth_usd_price_feed: "0x8A753747A1FA494EC906CE90E9F37563A8AF630E"
+    vrf_coordinator: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B"
+    vrf_link_token: "0x01BE23585060835E02B77ef475b0Cc51aA1e0709"
+    vrf_key_hash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    vrf_fee: 100000000000000000
+    wallet_adr: "0x76fdbb9EF2De2033431A87AA7603544bdA0C075c"
+    wallet_private_key: ${PRIVATE_KEY_RINKEBY}
+    verify: "True"
+  kovan:
+    eth_usd_price_feed: "0x9326BFA02ADD2366b30bacB125260Af641031331"
+    vrf_coordinator: "0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9"
+    vrf_link_token: "0xa36085F69e2889c224210F603D836748e7dC0088"
+    vrf_key_hash: "0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4"
+    vrf_fee: 100000000000000000
+    wallet_adr: "0x3b1dF08DcA053348A88d6E684Ae4a6A716F19470"
+    wallet_private_key: ${PRIVATE_KEY_KOVAN}
+    verify: "True"
+  ganache-local:
+    #eth_usd_price_feed: "0x8A753747A1FA494EC906CE90E9F37563A8AF630E"
+    #vrf_coordinator: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B"
+    #vrf_link_token: "0x01BE23585060835E02B77ef475b0Cc51aA1e0709"
+    vrf_key_hash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    vrf_fee: 0
+    verify: "False"
+  development:
+    #eth_usd_price_feed: "0x8A753747A1FA494EC906CE90E9F37563A8AF630E"
+    #vrf_coordinator: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B"
+    #vrf_link_token: "0x01BE23585060835E02B77ef475b0Cc51aA1e0709"
+    vrf_key_hash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    vrf_fee: 0
+    verify: "False"
