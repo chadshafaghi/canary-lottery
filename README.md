@@ -4,6 +4,6 @@
 
 How could we Test ?
 
-1. "mainnet-fork"
-2. "mock"
-3. "Rinkeby"
+1. "mainnet-fork via Infura and Alchemy"
+2. "ganache-cli (dev) or ganache-local using Mock instances"
+3. "Rinkeby or Kovan"
