@@ -60,7 +60,7 @@ def deploy_mocks(decimals=DECIMAL, starting_price=STARTING_PRICE):
 
 def get_contract(contract_name):
     """This function will grab the contract addresses from the brownie config
-    if define d, otherwisem it will deploy a new version of that contact , and
+    if define, otherwisem it will deploy a new version of that contract , and
     return that mock contract
 
     Args :
